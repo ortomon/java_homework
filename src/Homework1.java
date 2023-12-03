@@ -7,14 +7,17 @@ public class Homework1 {
     }
 
     public static void ex1() {
-        //Дана строка
         String name = "     ПЕтРов Олег Иванович     ";
-        //Необходимо
-        //1. убрать лишние пробелы,
-        //2. перевести текст в верхний регистр
-        //3. Если содержит "ова " то печатаем на экран: Уважаемая {name}
-        // Если содержит "ов " то печатаем на экран: Уважаемый {name}
-        // В иных случаях печатаем на экран: Неизвестное лицо {name}
+        name = name.trim();
+        name = name.toUpperCase();
+
+        if (name.contains("ова ")) {
+            System.out.printf("ex1: Уважаемая %s\n", name);
+        } else if (name.contains("ов ")) {
+            System.out.printf("ex1: Уважаемый %s\n", name);
+        } else {
+            System.out.printf("ex1: Неизвестное лицо %s\n", name);
+        }
     }
 
     public static void ex2() {
@@ -34,15 +37,10 @@ public class Homework1 {
         //Поменять(убрать, поставить) логические операторы так, чтобы машина запускалась:
         // когда топлива не меньше 10 литров, двигатель работает, колеса все работают, нет ошибок
         //В ином случае, машина не должна запускаться
-        if (
-                fuel < 10
-                        ||  (!isWheelWork1 || isWheelWork2 || isWheelWork3 || isWheelWork4)
-                        && hasErrors
-                        || isEngineWork
-        ) {
-            System.out.println("Машина работает");
+        if (fuel >= 10 && isEngineWork && (isWheelWork1 && isWheelWork2 && isWheelWork3 && isWheelWork4) && !hasErrors) {
+            System.out.println("ex2: Машина работает");
         } else {
-            System.out.println("Машина не работает");
+            System.out.println("ex2: Машина не работает");
         }
     }
 
@@ -51,6 +49,10 @@ public class Homework1 {
         //Заменить в строке все 'this is' на 'those are', получить индекс (число) второй буквы 'o' в строке
         //Распечатать полученный индекс
         String simply = "this is simply. This is my favorite song.";
+        String newSimply = simply.replaceAll("is is", "ose are");
+        int value1 = newSimply.indexOf('o') + 1;
+        int value2 = newSimply.indexOf('o', value1);
+        System.out.printf("ex3: индекс = %s\n", value2);
 
     }
 
