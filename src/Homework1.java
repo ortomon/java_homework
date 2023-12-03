@@ -41,9 +41,8 @@ public class Homework1 {
 
     public static void ex3() {
         String simply = "this is simply. This is my favorite song.";
-        String newSimply = simply.replaceAll("is is", "ose are");
-        int value1 = newSimply.indexOf('o') + 1;
-        int value2 = newSimply.indexOf('o', value1);
+        String newSimply = simply.replaceAll("this is", "those are").replaceAll("This is", "Those are");
+        int value2 = newSimply.indexOf('o', newSimply.indexOf('o') + 1);
         System.out.printf("ex3: индекс = %s\n", value2);
     }
 
@@ -85,9 +84,9 @@ public class Homework1 {
 
         //расчет налога
         if (profitBeforeTaxes > 2_000_000) {
-            tax = profitBeforeTaxes / 100 * 13;
+            tax = (1_000_000 / 100 * 8) + (999_999 / 100 * 10) + ((profitBeforeTaxes - 2_000_000) / 100 * 13);
         } else if (1_000_001 <= profitBeforeTaxes && profitBeforeTaxes <= 2_000_000) {
-            tax = profitBeforeTaxes / 100 * 10;
+            tax = (1_000_000 / 100 * 8) + ((profitBeforeTaxes - 1_000_001) / 100 * 10);
         } else {
             tax = profitBeforeTaxes / 100 * 8;
         }
