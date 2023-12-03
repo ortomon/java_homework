@@ -8,8 +8,7 @@ public class Homework1 {
 
     public static void ex1() {
         String name = "     ПЕтРов Олег Иванович     ";
-        name = name.trim();
-        name = name.toUpperCase();
+        name = name.trim().toUpperCase();
 
         if (name.contains("ова ")) {
             System.out.printf("ex1: Уважаемая %s\n", name);
@@ -21,7 +20,6 @@ public class Homework1 {
     }
 
     public static void ex2() {
-        //У нас есть машина. В данной машине есть есть перечень проверок, перед запуском
         //Количество топлива
         double fuel = 10;
         //Проверка двигателя
@@ -34,9 +32,6 @@ public class Homework1 {
         boolean isWheelWork3 = true;
         boolean isWheelWork4 = true;
 
-        //Поменять(убрать, поставить) логические операторы так, чтобы машина запускалась:
-        // когда топлива не меньше 10 литров, двигатель работает, колеса все работают, нет ошибок
-        //В ином случае, машина не должна запускаться
         if (fuel >= 10 && isEngineWork && (isWheelWork1 && isWheelWork2 && isWheelWork3 && isWheelWork4) && !hasErrors) {
             System.out.println("ex2: Машина работает");
         } else {
@@ -45,53 +40,59 @@ public class Homework1 {
     }
 
     public static void ex3() {
-        //Работа на самостоятельное изучение методов.
-        //Заменить в строке все 'this is' на 'those are', получить индекс (число) второй буквы 'o' в строке
-        //Распечатать полученный индекс
         String simply = "this is simply. This is my favorite song.";
         String newSimply = simply.replaceAll("is is", "ose are");
         int value1 = newSimply.indexOf('o') + 1;
         int value2 = newSimply.indexOf('o', value1);
         System.out.printf("ex3: индекс = %s\n", value2);
-
     }
 
     public static void ex4() {
-        //Компания Рога и Копыта производит мясные продукты.
-        //Перечень производимых товаров :
-        //Колбаса - стоимость 800 руб,
-        //себестоимость при производстве меньше 1000 кг - 412руб,
-        //себестоимость при производстве от 1000 до 2000 (не включая) - 408 руб
-        //себестоимость при производстве от 2000кг - 404 руб
+        int sausagePrice = 800;
+        int soldSausage = 2000;
+        int sausageCostPrice = 0;
 
-        //Ветчина - стоимость 350 руб
-        //себестоимость при производстве - 275 руб
+        int hamPrice = 350;
+        int soldHam = 8511;
+        int hamCostPrice = 275;
 
-        //Шейка - стоимость 500 руб
-        //себестоимость при производстве меньше 500кг - 311 руб
-        //себестоимость при производстве больше или равно 500кг - 299 руб
+        int neckPrice = 500;
+        int soldNeck = 6988;
+        int neckCostPrice = 0;
+
+        int tax = 0;
+
+        //расчет себестоимости sausage
+        if (soldSausage < 1000) {
+            sausageCostPrice = 412;
+        } else if (1000 <= soldSausage && soldSausage < 2000) {
+            sausageCostPrice = 408;
+        } else {
+            sausageCostPrice = 404;
+        }
+
+        //расчет себестоимости neck
+        if (soldNeck < 500) {
+            neckCostPrice = 311;
+        } else {
+            neckCostPrice = 299;
+        }
 
         //Финансовые показатели
-        //Доход компании считается как умножение стоимости на количество проданных кг
-        //Расход компании считается как умножение себестоимости на количество проданных кг + миллион рублей
-        //Прибыль до налогов считается как: доход - расход
-        //Налоги считаются так:
-        // прибыль до налогов больше 2_000_000 (не включительно), облагается ставкой 13%
-        // прибыль до налогов от 1_000_001 (включительно) до 2_000_000 (включительно), облагается ставкой 10%
-        // прибыль до налогов меньше или равно 1_000_000, облагается ставкой 8%
-        //пример расчета налогов для прибыли до налогов 2_500_000:
-        //1_000_000 - налог 80_000 - по ставке 8%
-        //999_999 - налог 99_999.9 - по ставке 10%
-        //500_000 - 65_000 - по ставке 13%
-        //Итоговый налог: 80_000 + 100_000 + 65_000 = 249_999.9
-        //Прибыль после налогов: прибыль до налогов - налог.
+        int income = (sausagePrice * soldSausage) + (hamPrice * soldHam) + (neckPrice * soldNeck);
+        int expenses = (sausageCostPrice * soldSausage) + (hamCostPrice * soldHam) + (neckCostPrice * soldNeck) + 1_000_000;
+        int profitBeforeTaxes = income - expenses;
 
-        //Необходимо создать универсальную систему расчетов прибыли после налогов,
-        //Т.е на вход подаются данные по количеству произведенных продуктов
-        // и печатается прибыль после налогов компании
-        //Узнать прибыль после налогов, при продаже:
-        //Колбасы 2000кг
-        //Ветчины 8511кг
-        //Шейки 6988кг
+        //расчет налога
+        if (profitBeforeTaxes > 2_000_000) {
+            tax = profitBeforeTaxes / 100 * 13;
+        } else if (1_000_001 <= profitBeforeTaxes && profitBeforeTaxes <= 2_000_000) {
+            tax = profitBeforeTaxes / 100 * 10;
+        } else {
+            tax = profitBeforeTaxes / 100 * 8;
+        }
+
+        int profitAfterTaxes = profitBeforeTaxes - tax;
+        System.out.printf("ex4: прибыль после налогов = %s\n", profitAfterTaxes);
     }
 }
