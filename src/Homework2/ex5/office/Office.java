@@ -1,4 +1,5 @@
 package Homework2.ex5.office;
+
 public class Office {
     Boss boss;
     Manager manager;

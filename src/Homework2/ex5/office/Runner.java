@@ -1,4 +1,5 @@
 package Homework2.ex5.office;
+
 public class Runner {
     public static void main(String[] args) {
         Boss boss = new Boss("Петр Николаевич");
