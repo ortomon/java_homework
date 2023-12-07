@@ -1,3 +1,5 @@
+package Homework1;
+
 public class Homework1 {
     public static void main(String[] args) {
         ex1();
@@ -49,7 +51,7 @@ public class Homework1 {
     public static void ex4() {
         int sausagePrice = 800;
         int soldSausage = 2000;
-        int sausageCostPrice = 0;
+        int sausageCostPrice;
 
         int hamPrice = 350;
         int soldHam = 8511;
@@ -57,9 +59,9 @@ public class Homework1 {
 
         int neckPrice = 500;
         int soldNeck = 6988;
-        int neckCostPrice = 0;
+        int neckCostPrice;
 
-        int tax = 0;
+        int tax;
 
         //расчет себестоимости sausage
         if (soldSausage < 1000) {
