@@ -4,9 +4,9 @@ public class Worker {
     String name;
     int age;
     String sex;
-    String[] workerItem ;
+    Item[] workerItem ;
 
-    public Worker (String name, int age,  String sex, String[] workerItem) {
+    public Worker (String name, int age,  String sex, Item[] workerItem) {
         this.name = name;
         this.age = age;
         this.sex = sex;

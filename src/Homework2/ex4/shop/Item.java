@@ -8,4 +8,12 @@ public class Item {
         this.weight = weight;
         this.name = name;
     }
+
+    @Override
+    public String toString() {
+        return "Item{" +
+                "weight=" + weight +
+                ", name='" + name + '\'' +
+                '}';
+    }
 }

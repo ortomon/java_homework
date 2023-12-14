@@ -7,8 +7,10 @@ public class Runner {
         Item copybook = new Item(30, "тетрадь");
         Item pen = new Item(10, "ручка");
 
-        String[] vasiliyItem = {hammer.name, screwdriver.name};
-        String[] marianaItem = {copybook.name, pen.name};
+        System.out.println(hammer.toString());
+
+        Item[] vasiliyItem = {hammer, screwdriver};
+        Item[] marianaItem = {copybook, pen};
 
         Worker vasiliy = new Worker("Василий", 30, "М", vasiliyItem);
         Worker mariana = new Worker("Марьяна", 25, "Ж", marianaItem);
