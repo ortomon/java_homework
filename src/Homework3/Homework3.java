@@ -24,6 +24,17 @@ public class Homework3 {
     }
 
     public static void ex2() {
+        Factory factory = new Factory();
+
+        Samsung samsung = new Samsung();
+        AbstractPhone samsungGalaxy = factory.assemble(samsung);
+
+        Iphone iphone = new Iphone();
+        AbstractPhone iphone15 = factory.assemble(iphone);
+
+        System.out.println("Assembled Samsung Galaxy: " + samsungGalaxy);
+        System.out.println("Assembled iPhone 15: " + iphone15);
+
         //Задача: Фабрика телефонов
         //Создать 2 типа телефонов и комплектующих к ним.
 
@@ -42,17 +53,6 @@ public class Homework3 {
         //В фабрике должно быть два публичных метода с одним названием:
         //один будет собирать iphone, второй будет собирать samsung.
         //В данном методе создать два телефона, собрать их, распечатать.
-
-        Factory factory = new Factory();
-
-        Samsung samsung = new Samsung();
-        AbstractPhone samsungGalaxy = factory.assemble(samsung);
-
-        Iphone iphone = new Iphone();
-        AbstractPhone iphone15 = factory.assemble(iphone);
-
-        System.out.println("Assembled Samsung Galaxy: " + samsungGalaxy);
-        System.out.println("Assembled iPhone 15: " + iphone15);
     }
 
     public static void ex3() {
