@@ -4,7 +4,7 @@ import homework4.ex1.*;
 import homework4.ex2.*;
 import homework4.ex3.*;
 import homework4.ex4.oneGramChat.*;
-import homework4.ex4.oneGramChatException.*;
+import homework4.ex4.exception.*;
 
 public class Homework4 {
     public static void main(String[] args) throws Exception {

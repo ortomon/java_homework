@@ -1,4 +1,4 @@
-package homework4.ex4.oneGramChatException;
+package homework4.ex4.exception;
 
 public class UserNotFoundException extends Exception {
     public UserNotFoundException() {

@@ -1,6 +1,6 @@
 package homework4.ex4.oneGramChat;
 
-import homework4.ex4.oneGramChatException.*;
+import homework4.ex4.exception.*;
 import java.util.Scanner;
 
 public class OneGramChat {
