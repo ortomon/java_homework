@@ -8,7 +8,7 @@ import homework3.ex5.*;
 
 public class Homework3 {
     public static void main(String[] args) throws CloneNotSupportedException {
-        ex1();
+        ex2();
     }
 
     public static void ex1() {
@@ -27,13 +27,13 @@ public class Homework3 {
         Factory factory = new Factory();
 
         Samsung samsung = new Samsung();
-        AbstractPhone samsungGalaxy = factory.assemble(samsung);
+        factory.assemble(samsung);
 
         Iphone iphone = new Iphone();
-        AbstractPhone iphone15 = factory.assemble(iphone);
+        factory.assemble(iphone);
 
-        System.out.println("Assembled Samsung Galaxy: " + samsungGalaxy);
-        System.out.println("Assembled iPhone 15: " + iphone15);
+        System.out.println("Assembled Samsung Galaxy: " + samsung);
+        System.out.println("Assembled iPhone 15: " + iphone);
 
         //Задача: Фабрика телефонов
         //Создать 2 типа телефонов и комплектующих к ним.
