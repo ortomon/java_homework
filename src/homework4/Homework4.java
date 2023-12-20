@@ -108,7 +108,7 @@ public class Homework4 {
         } catch (noCurrentUserException e) {
             System.out.println(e.getMessage());
             System.out.println("Войдите, чтобы написать или прочитать сообщения.");
-        } catch (UserNotFoundException | MaxUsersReachedException | AlreadyAuthenticatedException e) {
+        } catch (Exception e) {
             System.out.println(e.getMessage());
         }
 

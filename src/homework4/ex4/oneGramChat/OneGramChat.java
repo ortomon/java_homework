@@ -14,7 +14,7 @@ public class OneGramChat {
     }
 
     // регистрация
-    public void signUp() throws MaxUsersReachedException, AlreadyAuthenticatedException {
+    public void signUp() throws Exception {
         if (currentUser != null) {
             throw new AlreadyAuthenticatedException();
         }
@@ -35,7 +35,7 @@ public class OneGramChat {
     }
 
     // авторизация
-    public void logIn() throws UserNotFoundException, AlreadyAuthenticatedException {
+    public void logIn() throws Exception {
         if (currentUser != null) {
             throw new AlreadyAuthenticatedException();
         }
@@ -62,7 +62,7 @@ public class OneGramChat {
     }
 
     // написать сообщение
-    public void writeMessage() throws UserNotFoundException, noCurrentUserException {
+    public void writeMessage() throws Exception {
         if (currentUser == null) {
             throw new noCurrentUserException();
         }
@@ -83,7 +83,7 @@ public class OneGramChat {
     }
 
     // прочитать письма текущего пользователя
-    public void readMessages() throws noCurrentUserException {
+    public void readMessages() throws Exception {
         if (currentUser == null) {
             throw new noCurrentUserException();
         }
@@ -97,7 +97,7 @@ public class OneGramChat {
         }
     }
 
-    public void start() throws UserNotFoundException, noCurrentUserException, MaxUsersReachedException, AlreadyAuthenticatedException {
+    public void start() throws Exception {
         Scanner scanner = new Scanner(System.in);
         while (true) {
             System.out.println("Введите команду: ");
