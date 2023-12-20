@@ -7,7 +7,7 @@ import homework4.ex4.oneGramChat.*;
 import homework4.ex4.exception.*;
 
 public class Homework4 {
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
         ex4();
     }
 
@@ -40,7 +40,7 @@ public class Homework4 {
         //Посчитать, сколько мэрия заплатит денег за мойку машин.
     }
 
-    public static void ex2() throws Exception {
+    public static void ex2() {
         Flyable[] flyables = {
                 new Duck(false),
                 new Duck(true),
@@ -100,7 +100,7 @@ public class Homework4 {
         //Изданные звуки распечатать.
     }
 
-    public static void ex4() throws Exception {
+    public static void ex4() {
         OneGramChat oneGramChat = new OneGramChat();
 
         try {
