@@ -1,4 +1,4 @@
-package homework4.ex4.oneGramChat;
+package homework4.ex4.onegramchat;
 
 /**
  * Создать Пользователя(имя, пароль, список сообщений)
@@ -7,13 +7,12 @@ package homework4.ex4.oneGramChat;
 public class User {
     private String name;
     private String password;
-    private Message[] messages;
     private static final int MAX_MESSAGES = 100;
+    private Message[] messages = new Message[MAX_MESSAGES];
 
     public User(String name, String password) {
         this.name = name;
         this.password = password;
-        this.messages = new Message[MAX_MESSAGES];
     }
 
     public Message[] getMessages() {

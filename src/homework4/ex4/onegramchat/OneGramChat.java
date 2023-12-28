@@ -1,17 +1,13 @@
-package homework4.ex4.oneGramChat;
+package homework4.ex4.onegramchat;
 
 import homework4.ex4.exception.*;
 import java.util.Scanner;
 
 public class OneGramChat {
     private static final int MAX_USERS = 100;
-    private User currentUser;
-    private User[] users;
+    private User currentUser = null;
+    private User[] users = new User[MAX_USERS];
 
-    public OneGramChat() {
-        this.currentUser = null;
-        this.users = new User[MAX_USERS];
-    }
 
     // регистрация
     public void signUp() throws Exception {

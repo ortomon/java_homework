@@ -11,10 +11,7 @@ public class CarWash {
     public int washingCar(Car[] cars) {
         int totalCost = 0;
         for (Car car : cars) {
-            // Делает машины чистыми.
-            car.setClean(true);
-            // Возвращает стоимость помывки за все машины.
-            totalCost += cost(car);
+            totalCost += washingCar(car);
         }
         return totalCost;
     }

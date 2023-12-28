@@ -1,4 +1,4 @@
-package homework4.ex4.oneGramChat;
+package homework4.ex4.onegramchat;
 
 /**
  * Создать сообщение (текст, входящее/исходящее, кому/от кого)

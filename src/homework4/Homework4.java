@@ -3,12 +3,12 @@ package homework4;
 import homework4.ex1.*;
 import homework4.ex2.*;
 import homework4.ex3.*;
-import homework4.ex4.oneGramChat.*;
+import homework4.ex4.onegramchat.*;
 import homework4.ex4.exception.*;
 
 public class Homework4 {
     public static void main(String[] args) {
-        ex4();
+        ex1();
     }
 
     public static void ex1() {
@@ -22,6 +22,7 @@ public class Homework4 {
                 cars[i] = new Bus(false, 2.3, 3, 12);
             }
         }
+
 
         System.out.println(carWash.washingCar(cars));
 
