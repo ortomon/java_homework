@@ -33,6 +33,7 @@ public class BaggageCompartment {
                 }
             }
         }
+
         arrivalOrder.clear();
     }
 }
