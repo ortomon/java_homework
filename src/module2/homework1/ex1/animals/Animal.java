@@ -1,4 +1,4 @@
-package module2.Homework1.ex1.animals;
+package module2.homework1.ex1.animals;
 
 public abstract class Animal {
     private String name;

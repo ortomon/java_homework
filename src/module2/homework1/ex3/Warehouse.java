@@ -1,4 +1,4 @@
-package module2.Homework1.ex3;
+package module2.homework1.ex3;
 
 import java.util.ArrayList;
 import java.util.List;

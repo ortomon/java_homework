@@ -1,9 +1,8 @@
-package module2.Homework1.ex1;
+package module2.homework1.ex1;
 
-import module2.Homework1.ex1.animals.Animal;
-import module2.Homework1.ex1.animals.Bird;
-import module2.Homework1.ex1.animals.Dog;
-import module2.Homework1.ex1.animals.Tiger;
+import module2.homework1.ex1.animals.Bird;
+import module2.homework1.ex1.animals.Dog;
+import module2.homework1.ex1.animals.Tiger;
 
 public class Runner {
     public static void main(String[] args) {

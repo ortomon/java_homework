@@ -8,7 +8,7 @@ import module1.homework4.ex4.exception.*;
 
 public class Homework4 {
     public static void main(String[] args) {
-        ex1();
+        ex2();
     }
 
     public static void ex1() {

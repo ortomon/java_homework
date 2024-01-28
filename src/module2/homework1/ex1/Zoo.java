@@ -1,12 +1,6 @@
-package module2.Homework1.ex1;
+package module2.homework1.ex1;
 
-import module2.Homework1.ex1.animals.Animal;
-import module2.Homework1.ex1.animals.Bird;
-import module2.Homework1.ex1.animals.Dog;
-import module2.Homework1.ex1.animals.Tiger;
-
-import java.util.ArrayList;
-import java.util.List;
+import module2.homework1.ex1.animals.Animal;
 
 public class Zoo<T extends Animal, S extends Animal, V extends Animal> {
     private T animal1;
