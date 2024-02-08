@@ -15,14 +15,13 @@ public class Runner {
         // 6
 
         Set<String> words = Set.of("тонь", "тополь", "боль", "рой", "стройка");
-//        Set<String> words = Set.of("тнь", "ль");
 
         words.stream()
                 .map(word -> countLetterO(word))
                 .reduce((a, b) -> a + b)
                 .ifPresentOrElse(
                         System.out::println,
-                        () -> {throw new RuntimeException("Буквы 'о' не найдены."); });
+                        () -> { throw new RuntimeException("Буквы 'о' не найдены."); });
     }
 
     public static int countLetterO(String word) {
