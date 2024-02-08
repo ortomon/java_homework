@@ -16,6 +16,6 @@ public class Runner {
         Ruller<Animal> animalRuller = animal -> animal.getBodyLength() + animal.getTailLength();
 
         boatRuller.measure(new Boat(5));
-        animalRuller.measure(new Animal(5,6));
+        animalRuller.measure(new Animal(5, 6));
     }
 }

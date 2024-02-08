@@ -12,9 +12,9 @@ public class Runner {
 
         FortuneTelling<String> camomile = name -> name.length() % 2 == 0;
 
-        FortuneTelling<Human> grannyFortuneTeller = human -> {
-            return (human.getAge() + human.getHeight()) > 210;
-        };
+        FortuneTelling<Human> grannyFortuneTeller = human ->
+                (human.getAge() + human.getHeight()) > 210;
+
 
         Human alina = new Human("Alina", 20, 162);
         Human danila = new Human("Danila", 30, 190);

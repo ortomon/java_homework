@@ -18,6 +18,7 @@ import java.time.LocalDateTime;
 import java.util.Objects;
 
 public class Feedback {
+    private Node node;
     private int id;
     private String text;
     private int numberLikes;
