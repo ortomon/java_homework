@@ -23,17 +23,17 @@ public class Runner {
     }
 
     public static Stream<String> generateAN799Cars() {
-        return generateCars("а", "ан799", 50);
+        return generateCars("а", "ан799");
     }
 
     public static Stream<String> generateSE178Cars() {
-        return generateCars("к", "се178", 50);
+        return generateCars("к", "се178");
     }
 
-    public static Stream<String> generateCars(String number1, String number2, int limit) {
+    public static Stream<String> generateCars(String number1, String number2) {
         AtomicInteger counter = new AtomicInteger();
         return Stream.generate(() -> new Car(number1 + String.format("%03d", counter.addAndGet(1)) + number2))
-                .limit(limit)
+                .limit(50)
                 .map(Car::getNumber);
     }
 }
